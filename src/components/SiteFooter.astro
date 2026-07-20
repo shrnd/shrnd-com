@@ -1,12 +1,27 @@
+---
+interface Props {
+  hidePrivacyLink?: boolean;
+}
+
+const { hidePrivacyLink = false } = Astro.props;
+---
+
 <footer class="site-footer">
-  <a class="wordmark wordmark--footer" href="/" aria-label="SHRND home">SHRND</a>
-  <div class="site-footer__legal">
-    <p>SHRND LTD · Registered in England and Wales · Company 17350332</p>
-    <p>Registered office: 71–75 Shelton Street, Covent Garden, London, United Kingdom, WC2H 9JQ.</p>
+  <div class="site-footer__inner">
+    <a class="wordmark" href="/" aria-label="SHRND home">SHRND</a>
+    <p class="site-footer__legal">
+      SHRND LTD — registered in England and Wales, company 17350332<br />
+      71–75 Shelton Street, Covent Garden, London WC2H 9JQ
+    </p>
+    <div class="site-footer__meta">
+      {
+        !hidePrivacyLink && (
+          <a class="site-footer__privacy" href="/privacy">
+            Privacy
+          </a>
+        )
+      }
+      <p class="site-footer__copyright">© 2026 SHRND LTD</p>
+    </div>
   </div>
-  <nav class="site-footer__nav" aria-label="Footer navigation">
-    <a href="/privacy">Privacy</a>
-    <a href="mailto:contact@shrnd.com">Contact</a>
-  </nav>
-  <p class="site-footer__copyright">© {new Date().getFullYear()} SHRND LTD</p>
 </footer>

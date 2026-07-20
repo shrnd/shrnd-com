@@ -1,7 +1,7 @@
 {
   "name": "SHRND",
   "short_name": "SHRND",
-  "description": "Original applications for Apple platforms, built around media, motion and native performance.",
+  "description": "Original apps for iPhone, iPad and Mac — camera, video and AI-assisted creative tools.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0c0d0e",

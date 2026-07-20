@@ -12,7 +12,7 @@ const iconSvg = (size) => `
     <rect width="180" height="180" rx="40" fill="#0c0d0e"/>
     <path d="M126 49H78c-18 0-30 9.5-30 23s12 21 30 21h28c18 0 30 9.5 30 23s-12 21-30 21H54"
       fill="none" stroke="#f8f7f3" stroke-linecap="round" stroke-width="17"/>
-    <circle cx="137" cy="43" r="9" fill="#7469ff"/>
+    <rect x="130.5" y="36.5" width="13" height="13" fill="#f8f7f3" transform="rotate(45 137 43)"/>
   </svg>`;
 
 const ogImageSvg = `
@@ -25,37 +25,41 @@ const ogImageSvg = `
         <stop stop-color="#7469ff" stop-opacity=".38"/>
         <stop offset="1" stop-color="#7469ff" stop-opacity="0"/>
       </radialGradient>
-      <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
-        <stop stop-color="#f2c58a"/>
-        <stop offset=".43" stop-color="#7469ff"/>
-        <stop offset="1" stop-color="#171820"/>
+      <linearGradient id="curve" gradientUnits="userSpaceOnUse" x1="664" y1="500" x2="1064" y2="150">
+        <stop stop-color="#fff" stop-opacity=".2"/>
+        <stop offset="1" stop-color="#a7a0ff" stop-opacity=".9"/>
       </linearGradient>
     </defs>
     <rect width="1200" height="630" fill="#0c0d0e"/>
     <rect width="1200" height="630" fill="url(#grid)"/>
     <rect width="1200" height="630" fill="url(#glow)"/>
-    <g transform="translate(832 65)">
-      <rect width="310" height="500" rx="24" fill="#141519" stroke="#fff" stroke-opacity=".24"/>
-      <path d="M0 46H310M0 416H310" stroke="#fff" stroke-opacity=".14"/>
-      <circle cx="24" cy="23" r="4" fill="#7469ff"/>
-      <text x="37" y="27" fill="#fff" fill-opacity=".48" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" letter-spacing="1.2">LIVE</text>
-      <text x="245" y="27" fill="#fff" fill-opacity=".38" font-family="Helvetica Neue,Arial,sans-serif" font-size="10">00:08:24</text>
-      <rect y="46" width="310" height="370" fill="url(#core)" fill-opacity=".36"/>
-      <path d="M0 112H310M0 178H310M0 244H310M0 310H310M62 46V416M124 46V416M186 46V416M248 46V416" stroke="#fff" stroke-opacity=".06"/>
-      <rect x="42" y="170" width="226" height="126" fill="#0c0d0e" fill-opacity=".48" stroke="#fff" stroke-opacity=".34"/>
-      <text x="59" y="201" fill="#fff" fill-opacity=".56" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" letter-spacing="1.4">01</text>
-      <text x="57" y="260" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="52" letter-spacing="-3">MOVE</text>
-      <path d="M58 276H252" stroke="#fff" stroke-opacity=".36"/>
-      <path d="M24 448H286" stroke="#fff" stroke-opacity=".13"/>
-      <rect x="48" y="460" width="174" height="18" rx="4" fill="#7469ff" fill-opacity=".28" stroke="#a7a0ff" stroke-opacity=".64"/>
-      <path d="M65 448V488" stroke="#fff"/>
-      <path d="M62 448l3-4 3 4z" fill="#fff"/>
+    <g fill="none">
+      <path d="M664 560H1064M664 560v8M764 560v8M864 560v8M964 560v8M1064 560v8" stroke="#fff" stroke-opacity=".12"/>
+      <path d="M664 500H848M1064 150H880" stroke="#fff" stroke-opacity=".22" stroke-dasharray="1 6" stroke-linecap="round"/>
+      <circle cx="848" cy="500" r="6" stroke="#fff" stroke-opacity=".45" stroke-width="1.3"/>
+      <circle cx="880" cy="150" r="6" stroke="#fff" stroke-opacity=".45" stroke-width="1.3"/>
+      <rect x="657" y="493" width="14" height="14" fill="#d7d3ff" transform="rotate(45 664 500)"/>
+      <rect x="1057" y="143" width="14" height="14" fill="#d7d3ff" transform="rotate(45 1064 150)"/>
+      <path d="M664 500C848 500 880 150 1064 150" stroke="url(#curve)" stroke-width="2.5"/>
+      <g fill="#fff">
+        <circle cx="714.9" cy="490.2" r="4.5" fill-opacity=".16"/>
+        <circle cx="758.6" cy="463.6" r="4.5" fill-opacity=".19"/>
+        <circle cx="796.8" cy="424.4" r="4.5" fill-opacity=".22"/>
+        <circle cx="831.3" cy="376.8" r="4.5" fill-opacity=".25"/>
+        <circle cx="864" cy="325" r="4.5" fill-opacity=".28"/>
+        <circle cx="896.7" cy="273.2" r="4.5" fill-opacity=".31"/>
+        <circle cx="931.2" cy="225.6" r="4.5" fill-opacity=".34"/>
+        <circle cx="969.4" cy="186.4" r="4.5" fill-opacity=".37"/>
+        <circle cx="1013.1" cy="159.8" r="4.5" fill-opacity=".4"/>
+      </g>
+      <circle cx="1046" cy="152" r="22" fill="#7469ff" fill-opacity=".35"/>
+      <circle cx="1046" cy="152" r="9" fill="#fff"/>
     </g>
     <text x="64" y="70" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="25" font-weight="700" letter-spacing="-1">SHRND</text>
-    <circle cx="151" cy="55" r="4" fill="#7469ff"/>
-    <text x="64" y="303" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="84" font-weight="400" letter-spacing="-5">We make</text>
-    <text x="64" y="386" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="84" font-weight="400" letter-spacing="-5">software move.</text>
-    <text x="66" y="552" fill="#fff" fill-opacity=".52" font-family="Helvetica Neue,Arial,sans-serif" font-size="17" letter-spacing="1.6">ORIGINAL APPS · MEDIA · MOTION · NATIVE PERFORMANCE</text>
+    <rect x="150.5" y="50" width="7" height="7" fill="#fff" transform="rotate(45 154 53.5)"/>
+    <text x="64" y="303" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="84" font-weight="400" letter-spacing="-5">Every frame,</text>
+    <text x="64" y="386" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="84" font-weight="400" letter-spacing="-5">considered.</text>
+    <text x="66" y="552" fill="#fff" fill-opacity=".52" font-family="Helvetica Neue,Arial,sans-serif" font-size="17" letter-spacing="1.6">INDEPENDENT APP STUDIO · LONDON</text>
   </svg>`;
 
 await Promise.all([

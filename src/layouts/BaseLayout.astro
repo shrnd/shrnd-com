@@ -1,5 +1,6 @@
 ---
 import '@fontsource-variable/instrument-sans/wght.css';
+import fontWoff2 from '@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2?url';
 import '../styles/global.css';
 
 interface Props {
@@ -13,7 +14,7 @@ interface Props {
 
 const {
   title = 'SHRND — Independent App Studio',
-  description = 'SHRND builds original applications for Apple platforms, focused on expressive interfaces, camera, video, real-time media and thoughtfully applied AI.',
+  description = 'SHRND is an independent app studio in London, building original apps for iPhone, iPad and Mac — camera, video and creative tools with meticulously crafted interfaces.',
   canonicalPath = Astro.url.pathname,
   imagePath = '/og-image.png',
   themeColor = '#0c0d0e',
@@ -28,12 +29,13 @@ const imageUrl = new URL(imagePath, Astro.site);
 <html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content={themeColor} />
     <meta name="color-scheme" content="light" />
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
-    <link rel="canonical" href={canonicalUrl} />
+    {!noindex && <link rel="canonical" href={canonicalUrl} />}
+    <link rel="preload" href={fontWoff2} as="font" type="font/woff2" crossorigin />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="SHRND" />
@@ -44,7 +46,7 @@ const imageUrl = new URL(imagePath, Astro.site);
     <meta property="og:image" content={imageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="SHRND — We make software move." />
+    <meta property="og:image:alt" content="SHRND — Every frame, considered." />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />

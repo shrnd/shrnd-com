@@ -20,6 +20,7 @@ if (hero && !reducedMotion.matches) {
 
   hero.addEventListener('pointermove', updatePosition, { passive: true });
   hero.addEventListener('pointerleave', () => {
+    cancelAnimationFrame(frame);
     hero.style.setProperty('--art-x', '0px');
     hero.style.setProperty('--art-y', '0px');
   });
