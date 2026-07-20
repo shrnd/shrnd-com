@@ -10,9 +10,12 @@
     "check": "astro check",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "preview": "astro preview"
+    "preview": "npm run build && wrangler dev",
+    "generate-types": "wrangler types",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^14.1.4",
     "@fontsource-variable/instrument-sans": "^5.3.0",
     "astro": "^7.1.2"
   },
@@ -21,7 +24,8 @@
     "prettier": "^3.9.5",
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.35.3",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "wrangler": "^4.112.0"
   },
   "engines": {
     "node": ">=22.12.0"
