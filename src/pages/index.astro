@@ -1,9 +1,203 @@
 ---
+import ArrowIcon from '../components/ArrowIcon.astro';
+import PrecisionField from '../components/PrecisionField.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const services = [
+  {
+    number: '01',
+    title: 'Consumer applications',
+    description: 'We design, develop and operate focused software products for Apple platforms.',
+  },
+  {
+    number: '02',
+    title: 'Mobile engineering',
+    description:
+      'Native iOS development, product architecture, performance and application delivery.',
+  },
+  {
+    number: '03',
+    title: 'Software consulting',
+    description:
+      'Product development and broader software-engineering services for selected partners.',
+  },
+];
+
+const organisation = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'SHRND LTD',
+  legalName: 'SHRND LTD',
+  url: 'https://shrnd.com',
+  email: 'contact@shrnd.com',
+  identifier: '17350332',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '71-75 Shelton Street, Covent Garden',
+    addressLocality: 'London',
+    postalCode: 'WC2H 9JQ',
+    addressCountry: 'GB',
+  },
+};
 ---
 
 <BaseLayout>
-  <main>
-    <h1>Software, thoughtfully built.</h1>
-  </main>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="hero" data-hero>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="SHRND home">SHRND</a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="#what-we-do">What we do</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero__art">
+      <PrecisionField />
+    </div>
+
+    <main id="main-content">
+      <section class="hero__content" aria-labelledby="hero-title">
+        <p class="hero__eyebrow hero-reveal hero-reveal--one">
+          <span>Independent software company</span>
+          <span>London · United Kingdom</span>
+        </p>
+
+        <h1 id="hero-title" class="hero__title hero-reveal hero-reveal--two">
+          <span>Software,</span>
+          <span>thoughtfully built.</span>
+        </h1>
+
+        <div class="hero__footer hero-reveal hero-reveal--three">
+          <p class="hero__description">
+            SHRND is an independent UK software company developing consumer applications for Apple
+            platforms and providing mobile and software engineering services.
+          </p>
+          <a class="text-link text-link--light" href="mailto:contact@shrnd.com">
+            <span>Contact us</span>
+            <ArrowIcon />
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <a class="hero__scroll" href="#what-we-do" aria-label="Continue to what we do">
+      <span>Explore</span>
+      <span class="hero__scroll-line"></span>
+    </a>
+  </div>
+
+  <section id="what-we-do" class="section services" aria-labelledby="services-title">
+    <div class="section__intro">
+      <p class="section-label">01 · What we do</p>
+      <h2 id="services-title">Focused products.<br />Serious engineering.</h2>
+      <p>
+        From first principles to final delivery, we shape software around the people who use it and
+        the platforms it lives on.
+      </p>
+    </div>
+
+    <ol class="service-list">
+      {
+        services.map((service) => (
+          <li class="service-item">
+            <span class="service-item__number">{service.number}</span>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+            <span class="service-item__mark" aria-hidden="true">
+              <ArrowIcon />
+            </span>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="principles" aria-labelledby="principles-title">
+    <div class="principles__inner">
+      <p class="section-label section-label--light">02 · How we work</p>
+      <h2 id="principles-title">Modern tools.<br />Exacting standards.</h2>
+      <div class="principles__copy">
+        <p>
+          We use AI where it accelerates the work. Product judgement, engineering rigour and
+          accountability stay human.
+        </p>
+        <p>
+          The result is a smaller, faster process without lowering the bar for performance, privacy
+          or finish.
+        </p>
+      </div>
+      <div class="principles__orbit" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about" aria-labelledby="about-title">
+    <p class="section-label">03 · About</p>
+    <div class="about__statement">
+      <h2 id="about-title">Independent<br />by design.</h2>
+      <div class="about__copy">
+        <p>
+          SHRND LTD is an independent software company registered in England and Wales. We combine
+          product engineering, design, marketing and support to build useful, carefully crafted
+          software.
+        </p>
+        <p>
+          We stay close to the work, make decisions quickly and partner selectively where our
+          experience can make a meaningful difference.
+        </p>
+      </div>
+    </div>
+
+    <dl class="company-facts">
+      <div>
+        <dt>Company</dt>
+        <dd>SHRND LTD</dd>
+      </div>
+      <div>
+        <dt>Registered number</dt>
+        <dd>17350332</dd>
+      </div>
+      <div>
+        <dt>Registered in</dt>
+        <dd>England &amp; Wales</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-title">
+    <div class="contact__topline">
+      <p class="section-label section-label--light">04 · Contact</p>
+      <p>Product · Partnership · Consulting</p>
+    </div>
+    <h2 id="contact-title">Let’s make something<br />worth keeping.</h2>
+    <p class="contact__intro">For product, partnership or consulting enquiries:</p>
+    <a class="contact__email" href="mailto:contact@shrnd.com">
+      <span>contact@shrnd.com</span>
+      <ArrowIcon />
+    </a>
+  </section>
+
+  <footer class="site-footer">
+    <a class="wordmark wordmark--footer" href="/" aria-label="SHRND home">SHRND</a>
+    <div class="site-footer__legal">
+      <p>SHRND LTD is registered in England and Wales. Company number 17350332.</p>
+      <p>
+        Registered office: 71–75 Shelton Street, Covent Garden, London, United Kingdom, WC2H 9JQ.
+      </p>
+    </div>
+    <nav class="site-footer__nav" aria-label="Footer navigation">
+      <a href="/privacy">Privacy</a>
+      <a href="mailto:contact@shrnd.com">Contact</a>
+    </nav>
+    <p class="site-footer__copyright">© {new Date().getFullYear()} SHRND LTD</p>
+  </footer>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(organisation)} />
+  <script src="../scripts/hero.ts"></script>
 </BaseLayout>

@@ -1,0 +1,87 @@
+<div class="precision-field" aria-hidden="true">
+  <div class="precision-field__glow"></div>
+  <svg viewBox="0 0 760 760" fill="none" focusable="false">
+    <defs>
+      <linearGradient id="field-line" x1="112" y1="92" x2="650" y2="688">
+        <stop stop-color="#ffffff" stop-opacity="0.08"></stop>
+        <stop offset="0.48" stop-color="#ffffff" stop-opacity="0.34"></stop>
+        <stop offset="1" stop-color="#978fff" stop-opacity="0.12"></stop>
+      </linearGradient>
+      <radialGradient
+        id="field-core"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientTransform="rotate(51 -108 441) scale(300)"
+      >
+        <stop stop-color="#9b94ff"></stop>
+        <stop offset="0.32" stop-color="#6f64fb"></stop>
+        <stop offset="0.72" stop-color="#26243d"></stop>
+        <stop offset="1" stop-color="#111215"></stop>
+      </radialGradient>
+      <linearGradient id="field-sheen" x1="255" y1="226" x2="503" y2="536">
+        <stop stop-color="#ffffff" stop-opacity="0.4"></stop>
+        <stop offset="0.36" stop-color="#ffffff" stop-opacity="0.02"></stop>
+        <stop offset="1" stop-color="#ffffff" stop-opacity="0.12"></stop>
+      </linearGradient>
+      <pattern id="field-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+        <path d="M48 0H0v48" stroke="#ffffff" stroke-opacity="0.055" stroke-width="1"></path>
+      </pattern>
+      <mask id="field-fade">
+        <radialGradient
+          id="field-mask"
+          cx="0"
+          cy="0"
+          r="1"
+          gradientTransform="translate(380 380) rotate(90) scale(360)"
+        >
+          <stop offset="0.62" stop-color="white"></stop>
+          <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+        </radialGradient>
+        <rect width="760" height="760" fill="url(#field-mask)"></rect>
+      </mask>
+    </defs>
+
+    <g mask="url(#field-fade)">
+      <rect width="760" height="760" fill="url(#field-grid)"></rect>
+      <g stroke="url(#field-line)" vector-effect="non-scaling-stroke">
+        <rect x="95" y="95" width="570" height="570" rx="214" transform="rotate(-8 380 380)"></rect>
+        <rect x="124" y="124" width="512" height="512" rx="190" transform="rotate(-5.6 380 380)"
+        ></rect>
+        <rect x="154" y="154" width="452" height="452" rx="164" transform="rotate(-3.5 380 380)"
+        ></rect>
+        <rect x="184" y="184" width="392" height="392" rx="138" transform="rotate(-1.6 380 380)"
+        ></rect>
+        <rect x="214" y="214" width="332" height="332" rx="112" transform="rotate(0.8 380 380)"
+        ></rect>
+        <rect x="244" y="244" width="272" height="272" rx="87" transform="rotate(3.5 380 380)"
+        ></rect>
+      </g>
+
+      <path d="M120 379h520M380 120v520" stroke="#ffffff" stroke-opacity="0.075"></path>
+      <circle cx="380" cy="380" r="252" stroke="#ffffff" stroke-opacity="0.055"></circle>
+      <circle cx="380" cy="380" r="176" stroke="#ffffff" stroke-opacity="0.05"></circle>
+    </g>
+
+    <g transform="rotate(5 380 380)">
+      <rect x="266" y="266" width="228" height="228" rx="78" fill="url(#field-core)"></rect>
+      <rect x="267" y="267" width="226" height="226" rx="77" stroke="url(#field-sheen)"></rect>
+      <path
+        d="M290 365c0-38.7 31.3-70 70-70h40c38.7 0 70 31.3 70 70v30c0 38.7-31.3 70-70 70h-40c-38.7 0-70-31.3-70-70z"
+        stroke="#ffffff"
+        stroke-opacity="0.12"></path>
+      <path d="M302 312 458 448" stroke="#ffffff" stroke-opacity="0.17"></path>
+      <circle cx="447" cy="321" r="4" fill="#fff" fill-opacity="0.82"></circle>
+    </g>
+
+    <g fill="#ffffff" fill-opacity="0.56">
+      <circle cx="95" cy="380" r="2"></circle>
+      <circle cx="665" cy="380" r="2"></circle>
+      <circle cx="380" cy="95" r="2"></circle>
+      <circle cx="380" cy="665" r="2"></circle>
+    </g>
+  </svg>
+
+  <span class="precision-field__label precision-field__label--top">Products / Systems</span>
+  <span class="precision-field__label precision-field__label--bottom">London · 51.5072° N</span>
+</div>
