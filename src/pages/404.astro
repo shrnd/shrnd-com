@@ -1,0 +1,30 @@
+---
+import ArrowIcon from '../components/ArrowIcon.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page not found — SHRND"
+  description="The page you were looking for could not be found."
+  canonicalPath="/404"
+  noindex
+>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <SiteHeader />
+
+  <main id="main-content" class="not-found">
+    <p class="section-label section-label--light">Page not found</p>
+    <h1>404.</h1>
+    <div class="not-found__footer">
+      <p>The page you were looking for has moved or does not exist.</p>
+      <a class="text-link text-link--light" href="/">
+        <span>Return home</span>
+        <ArrowIcon />
+      </a>
+    </div>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>

@@ -1,0 +1,18 @@
+---
+interface Props {
+  isHome?: boolean;
+  paper?: boolean;
+}
+
+const { isHome = false, paper = false } = Astro.props;
+const sectionPrefix = isHome ? '' : '/';
+---
+
+<header class:list={['site-header', { 'site-header--paper': paper }]}>
+  <a class="wordmark" href="/" aria-label="SHRND home">SHRND</a>
+  <nav class="primary-nav" aria-label="Primary navigation">
+    <a href={`${sectionPrefix}#what-we-do`}>What we do</a>
+    <a href={`${sectionPrefix}#about`}>About</a>
+    <a href={`${sectionPrefix}#contact`}>Contact</a>
+  </nav>
+</header>

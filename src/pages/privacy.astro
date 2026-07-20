@@ -1,0 +1,149 @@
+---
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Privacy — SHRND';
+const description =
+  'Privacy information for the SHRND website, including email enquiries and hosting logs.';
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/privacy" themeColor="#f1efe9">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <SiteHeader paper />
+
+  <main id="main-content" class="legal-main">
+    <header class="legal-hero">
+      <p class="section-label">Privacy · SHRND LTD</p>
+      <h1>Privacy.</h1>
+      <p class="legal-hero__summary">
+        This website is deliberately simple. It does not use analytics, advertising trackers or
+        non-essential cookies.
+      </p>
+      <p class="legal-hero__date">Last updated · 20 July 2026</p>
+    </header>
+
+    <div class="legal-layout">
+      <aside class="legal-sidebar" aria-label="Site operator">
+        <p class="section-label">Site operator</p>
+        <address>
+          <strong>SHRND LTD</strong><br />
+          Company number 17350332<br />
+          71–75 Shelton Street<br />
+          Covent Garden<br />
+          London WC2H 9JQ<br />
+          United Kingdom
+        </address>
+        <a href="mailto:contact@shrnd.com">contact@shrnd.com</a>
+      </aside>
+
+      <article class="legal-content">
+        <section aria-labelledby="privacy-overview">
+          <p class="legal-content__number">01</p>
+          <div>
+            <h2 id="privacy-overview">About this website</h2>
+            <p>
+              SHRND LTD operates this website. The site has no accounts, forms, payments or other
+              features that ask you to submit personal information. No personal data is collected
+              directly by the website.
+            </p>
+          </div>
+        </section>
+
+        <section aria-labelledby="privacy-email">
+          <p class="legal-content__number">02</p>
+          <div>
+            <h2 id="privacy-email">Email enquiries</h2>
+            <p>
+              If you email us, we receive your email address and any information you choose to
+              include. We use it only to respond to your enquiry, manage related correspondence and,
+              where relevant, take steps you request before entering into a contract.
+            </p>
+            <p>
+              Our legal basis is our legitimate interest in answering enquiries and operating our
+              business, or taking steps at your request before entering into a contract. We do not
+              use enquiry details for unrelated marketing.
+            </p>
+          </div>
+        </section>
+
+        <section aria-labelledby="privacy-logs">
+          <p class="legal-content__number">03</p>
+          <div>
+            <h2 id="privacy-logs">Hosting and server logs</h2>
+            <p>
+              Like most websites, our hosting provider may process standard server logs to deliver,
+              secure and operate the site. These logs can include an IP address, browser type,
+              requested page and the date and time of a request.
+            </p>
+            <p>
+              Logs may be retained by the hosting provider for an appropriate operational or
+              security period. SHRND does not use them for advertising or visitor profiling.
+            </p>
+          </div>
+        </section>
+
+        <section aria-labelledby="privacy-cookies">
+          <p class="legal-content__number">04</p>
+          <div>
+            <h2 id="privacy-cookies">Cookies and analytics</h2>
+            <p>
+              This site does not use analytics, advertising trackers or non-essential cookies. It
+              does not set its own cookies or store identifiers in your browser. There is therefore
+              no cookie consent banner.
+            </p>
+          </div>
+        </section>
+
+        <section aria-labelledby="privacy-retention">
+          <p class="legal-content__number">05</p>
+          <div>
+            <h2 id="privacy-retention">Retention and sharing</h2>
+            <p>
+              We keep enquiry correspondence only for as long as reasonably needed to respond and
+              meet legitimate administrative, contractual or legal requirements. We do not sell
+              personal data.
+            </p>
+            <p>
+              Information may be processed by service providers that support our website and email,
+              or disclosed to professional advisers or public authorities where necessary. Where a
+              provider processes information outside the UK, appropriate transfer safeguards apply.
+            </p>
+          </div>
+        </section>
+
+        <section aria-labelledby="privacy-rights">
+          <p class="legal-content__number">06</p>
+          <div>
+            <h2 id="privacy-rights">Your rights</h2>
+            <p>
+              Depending on the circumstances, UK data protection law may give you rights over your
+              personal data, including access, correction, deletion, restriction and objection.
+              Contact us at <a href="mailto:contact@shrnd.com">contact@shrnd.com</a> to make a request
+              or ask a privacy question.
+            </p>
+            <p>
+              You may also complain to the UK Information Commissioner’s Office. Details are
+              available at <a href="https://ico.org.uk/make-a-complaint/" rel="external"
+                >ico.org.uk/make-a-complaint</a
+              >.
+            </p>
+          </div>
+        </section>
+
+        <section aria-labelledby="privacy-changes">
+          <p class="legal-content__number">07</p>
+          <div>
+            <h2 id="privacy-changes">Changes to this notice</h2>
+            <p>
+              We will update this notice if the website or our handling of personal data changes.
+              The latest version will always appear on this page.
+            </p>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
