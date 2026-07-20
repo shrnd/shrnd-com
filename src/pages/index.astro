@@ -1,28 +1,37 @@
 ---
 import ArrowIcon from '../components/ArrowIcon.astro';
-import PrecisionField from '../components/PrecisionField.astro';
+import LivingFrame from '../components/LivingFrame.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const services = [
+const capabilities = [
   {
     number: '01',
-    title: 'Consumer applications',
-    description: 'We design, develop and operate focused software products for Apple platforms.',
+    title: 'Moving image',
+    description: 'Video, camera, audio and real-time composition built into focused consumer apps.',
   },
   {
     number: '02',
-    title: 'Mobile engineering',
+    title: 'Expressive interaction',
     description:
-      'Native iOS development, product architecture, performance and application delivery.',
+      'Rich native interfaces, purposeful animation and tactile experiences that reward attention.',
   },
   {
     number: '03',
-    title: 'Software consulting',
+    title: 'Intelligent tools',
     description:
-      'Product development and broader software-engineering services for selected partners.',
+      'AI used to remove friction and expand what people can create — never as a substitute for taste.',
   },
+];
+
+const engineCapabilities = [
+  'Native iOS',
+  'Real-time rendering',
+  'Video & audio',
+  'Camera systems',
+  'Motion design',
+  'AI-assisted creation',
 ];
 
 const organisation = {
@@ -33,6 +42,8 @@ const organisation = {
   url: 'https://shrnd.com',
   email: 'contact@shrnd.com',
   identifier: '17350332',
+  description:
+    'Independent app studio building original products for Apple platforms, focused on media, motion and native performance.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '71-75 Shelton Street, Covent Garden',
@@ -43,63 +54,66 @@ const organisation = {
 };
 ---
 
-<BaseLayout>
+<BaseLayout
+  title="SHRND — Independent App Studio"
+  description="SHRND builds original applications for Apple platforms, focused on expressive interfaces, camera, video, real-time media and thoughtfully applied AI."
+>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <SiteHeader isHome />
 
   <main id="main-content">
     <div class="hero" data-hero>
       <div class="hero__art">
-        <PrecisionField />
+        <LivingFrame />
       </div>
 
       <section class="hero__content" aria-labelledby="hero-title">
         <p class="hero__eyebrow hero-reveal hero-reveal--one">
-          <span>Independent software company</span>
+          <span>Independent app studio</span>
           <span>London · United Kingdom</span>
         </p>
 
         <h1 id="hero-title" class="hero__title hero-reveal hero-reveal--two">
-          <span>Software,</span>
-          <span>thoughtfully built.</span>
+          <span>We make</span>
+          <span>software move.</span>
         </h1>
 
         <div class="hero__footer hero-reveal hero-reveal--three">
           <p class="hero__description">
-            SHRND is an independent UK software company developing consumer applications for Apple
-            platforms and providing mobile and software engineering services.
+            SHRND builds original products for Apple platforms. We focus on expressive interfaces,
+            camera and video, real-time media, and thoughtfully applied AI.
           </p>
-          <a class="text-link text-link--light" href="mailto:contact@shrnd.com">
-            <span>Contact us</span>
+          <a class="text-link text-link--light" href="#what-we-build">
+            <span>What we build</span>
             <ArrowIcon />
           </a>
         </div>
       </section>
 
-      <a class="hero__scroll" href="#what-we-do" aria-label="Continue to what we do">
+      <a class="hero__scroll" href="#what-we-build" aria-label="Continue to what we build">
         <span>Explore</span>
         <span class="hero__scroll-line"></span>
       </a>
     </div>
 
-    <section id="what-we-do" class="section services" aria-labelledby="services-title">
+    <section id="what-we-build" class="section capabilities" aria-labelledby="capabilities-title">
       <div class="section__intro">
-        <p class="section-label">01 · What we do</p>
-        <h2 id="services-title">Focused products.<br />Serious engineering.</h2>
+        <p class="section-label">01 · What we build</p>
+        <h2 id="capabilities-title">Original products.<br />Built with depth.</h2>
         <p>
-          From first principles to final delivery, we shape software around the people who use it
-          and the platforms it lives on.
+          Most of our work is our own. We design, develop and operate a growing family of consumer
+          applications, with shared native technology underneath.
         </p>
       </div>
 
-      <ol class="service-list">
+      <ol class="capability-list">
         {
-          services.map((service) => (
-            <li class="service-item">
-              <span class="service-item__number">{service.number}</span>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-              <span class="service-item__mark" aria-hidden="true">
+          capabilities.map((capability) => (
+            <li class="capability-item">
+              <span class="capability-item__number">{capability.number}</span>
+              <h3>{capability.title}</h3>
+              <p>{capability.description}</p>
+              <span class="capability-item__mark" aria-hidden="true">
                 <ArrowIcon />
               </span>
             </li>
@@ -108,68 +122,74 @@ const organisation = {
       </ol>
     </section>
 
-    <section class="principles" aria-labelledby="principles-title">
-      <div class="principles__inner">
-        <p class="section-label section-label--light">02 · How we work</p>
-        <h2 id="principles-title">Modern tools.<br />Exacting standards.</h2>
-        <div class="principles__copy">
+    <section class="engine" aria-labelledby="engine-title">
+      <div class="engine__inner">
+        <p class="section-label section-label--light">02 · Under the surface</p>
+        <h2 id="engine-title">An engine beneath<br />every detail.</h2>
+        <div class="engine__copy">
           <p>
-            We use AI where it accelerates the work. Product judgement, engineering rigour and
-            accountability stay human.
+            We build below the interface when quality requires it — from rendering and timelines to
+            camera pipelines and performance-critical native systems.
           </p>
           <p>
-            The result is a smaller, faster process without lowering the bar for performance,
-            privacy or finish.
+            Our apps share a foundation for media, motion and interaction, developed in-house and
+            shaped by real products rather than abstract platform work.
           </p>
         </div>
-        <div class="principles__orbit" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <ul class="engine__capabilities" aria-label="Core capabilities">
+          {
+            engineCapabilities.map((capability, index) => (
+              <li>
+                <span>0{index + 1}</span>
+                {capability}
+              </li>
+            ))
+          }
+        </ul>
       </div>
     </section>
 
-    <section id="about" class="section about" aria-labelledby="about-title">
-      <p class="section-label">03 · About</p>
-      <div class="about__statement">
-        <h2 id="about-title">Independent<br />by design.</h2>
-        <div class="about__copy">
+    <section id="studio" class="section studio" aria-labelledby="studio-title">
+      <p class="section-label">03 · Studio</p>
+      <div class="studio__statement">
+        <h2 id="studio-title">Independent.<br />By design.</h2>
+        <div class="studio__copy">
           <p>
-            SHRND LTD is an independent software company registered in England and Wales. We combine
-            product engineering, design, marketing and support to build useful, carefully crafted
-            software.
+            SHRND is a small, independent product company in London. Product, design and engineering
+            stay close together, keeping decisions fast and the standard high.
           </p>
           <p>
-            We stay close to the work, make decisions quickly and partner selectively where our
-            experience can make a meaningful difference.
+            We use AI where it creates leverage. Product judgement, craft and accountability remain
+            human.
           </p>
         </div>
       </div>
 
-      <dl class="company-facts">
-        <div>
-          <dt>Company</dt>
-          <dd>SHRND LTD</dd>
-        </div>
-        <div>
-          <dt>Registered number</dt>
-          <dd>17350332</dd>
-        </div>
-        <div>
-          <dt>Registered in</dt>
-          <dd>England &amp; Wales</dd>
-        </div>
-      </dl>
+      <div class="studio__principles">
+        <p><span>01</span>Native at the core</p>
+        <p><span>02</span>Motion with a reason</p>
+        <p><span>03</span>Fast process, exacting finish</p>
+      </div>
     </section>
 
     <section id="contact" class="contact" aria-labelledby="contact-title">
       <div class="contact__topline">
-        <p class="section-label section-label--light">04 · Contact</p>
-        <p>Product · Partnership · Consulting</p>
+        <p class="section-label section-label--light">04 · Selected collaborations</p>
+        <p>Native mobile · Media · Performance</p>
       </div>
-      <h2 id="contact-title">Let’s make something<br />worth keeping.</h2>
-      <p class="contact__intro">For product, partnership or consulting enquiries:</p>
+      <h2 id="contact-title">Bring us a<br />difficult problem.</h2>
+      <div class="contact__copy">
+        <p>
+          We occasionally work with teams on ambitious product and engineering challenges —
+          particularly native mobile, media systems, performance and interaction. We take on very
+          few.
+        </p>
+        <p>
+          If the problem is unusual, technically demanding and worth doing properly, we’d like to
+          hear it.
+        </p>
+      </div>
+      <p class="contact__intro">Selected collaborations and thoughtful introductions:</p>
       <a class="contact__email" href="mailto:contact@shrnd.com">
         <span>contact@shrnd.com</span>
         <ArrowIcon />

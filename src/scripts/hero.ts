@@ -13,14 +13,14 @@ if (hero && !reducedMotion.matches) {
       const x = (event.clientX - bounds.left) / bounds.width - 0.5;
       const y = (event.clientY - bounds.top) / bounds.height - 0.5;
 
-      hero.style.setProperty('--field-x', `${(x * 12).toFixed(2)}px`);
-      hero.style.setProperty('--field-y', `${(y * 12).toFixed(2)}px`);
+      hero.style.setProperty('--art-x', `${(x * 12).toFixed(2)}px`);
+      hero.style.setProperty('--art-y', `${(y * 12).toFixed(2)}px`);
     });
   };
 
   hero.addEventListener('pointermove', updatePosition, { passive: true });
   hero.addEventListener('pointerleave', () => {
-    hero.style.setProperty('--field-x', '0px');
-    hero.style.setProperty('--field-y', '0px');
+    hero.style.setProperty('--art-x', '0px');
+    hero.style.setProperty('--art-y', '0px');
   });
 }

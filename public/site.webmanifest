@@ -1,7 +1,7 @@
 {
   "name": "SHRND",
   "short_name": "SHRND",
-  "description": "Apps and software engineering, thoughtfully built.",
+  "description": "Original applications for Apple platforms, built around media, motion and native performance.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0c0d0e",

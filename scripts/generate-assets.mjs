@@ -26,26 +26,36 @@ const ogImageSvg = `
         <stop offset="1" stop-color="#7469ff" stop-opacity="0"/>
       </radialGradient>
       <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
-        <stop stop-color="#a7a0ff"/>
-        <stop offset=".45" stop-color="#7469ff"/>
+        <stop stop-color="#f2c58a"/>
+        <stop offset=".43" stop-color="#7469ff"/>
         <stop offset="1" stop-color="#171820"/>
       </linearGradient>
     </defs>
     <rect width="1200" height="630" fill="#0c0d0e"/>
     <rect width="1200" height="630" fill="url(#grid)"/>
     <rect width="1200" height="630" fill="url(#glow)"/>
-    <g fill="none" stroke="#fff" stroke-opacity=".2">
-      <rect x="790" y="92" width="430" height="430" rx="165" transform="rotate(-8 1005 307)"/>
-      <rect x="823" y="125" width="364" height="364" rx="137" transform="rotate(-4 1005 307)"/>
-      <rect x="856" y="158" width="298" height="298" rx="108"/>
+    <g transform="translate(832 65)">
+      <rect width="310" height="500" rx="24" fill="#141519" stroke="#fff" stroke-opacity=".24"/>
+      <path d="M0 46H310M0 416H310" stroke="#fff" stroke-opacity=".14"/>
+      <circle cx="24" cy="23" r="4" fill="#7469ff"/>
+      <text x="37" y="27" fill="#fff" fill-opacity=".48" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" letter-spacing="1.2">LIVE</text>
+      <text x="245" y="27" fill="#fff" fill-opacity=".38" font-family="Helvetica Neue,Arial,sans-serif" font-size="10">00:08:24</text>
+      <rect y="46" width="310" height="370" fill="url(#core)" fill-opacity=".36"/>
+      <path d="M0 112H310M0 178H310M0 244H310M0 310H310M62 46V416M124 46V416M186 46V416M248 46V416" stroke="#fff" stroke-opacity=".06"/>
+      <rect x="42" y="170" width="226" height="126" fill="#0c0d0e" fill-opacity=".48" stroke="#fff" stroke-opacity=".34"/>
+      <text x="59" y="201" fill="#fff" fill-opacity=".56" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" letter-spacing="1.4">01</text>
+      <text x="57" y="260" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="52" letter-spacing="-3">MOVE</text>
+      <path d="M58 276H252" stroke="#fff" stroke-opacity=".36"/>
+      <path d="M24 448H286" stroke="#fff" stroke-opacity=".13"/>
+      <rect x="48" y="460" width="174" height="18" rx="4" fill="#7469ff" fill-opacity=".28" stroke="#a7a0ff" stroke-opacity=".64"/>
+      <path d="M65 448V488" stroke="#fff"/>
+      <path d="M62 448l3-4 3 4z" fill="#fff"/>
     </g>
-    <rect x="901" y="203" width="208" height="208" rx="73" transform="rotate(5 1005 307)" fill="url(#core)" stroke="#fff" stroke-opacity=".28"/>
-    <circle cx="1075" cy="228" r="5" fill="#fff"/>
     <text x="64" y="70" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="25" font-weight="700" letter-spacing="-1">SHRND</text>
     <circle cx="151" cy="55" r="4" fill="#7469ff"/>
-    <text x="64" y="303" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="84" font-weight="400" letter-spacing="-5">Software,</text>
-    <text x="64" y="386" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="84" font-weight="400" letter-spacing="-5">thoughtfully built.</text>
-    <text x="66" y="552" fill="#fff" fill-opacity=".52" font-family="Helvetica Neue,Arial,sans-serif" font-size="17" letter-spacing="1.6">APPS · MOBILE ENGINEERING · SOFTWARE CONSULTING</text>
+    <text x="64" y="303" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="84" font-weight="400" letter-spacing="-5">We make</text>
+    <text x="64" y="386" fill="#fff" font-family="Helvetica Neue,Arial,sans-serif" font-size="84" font-weight="400" letter-spacing="-5">software move.</text>
+    <text x="66" y="552" fill="#fff" fill-opacity=".52" font-family="Helvetica Neue,Arial,sans-serif" font-size="17" letter-spacing="1.6">ORIGINAL APPS · MEDIA · MOTION · NATIVE PERFORMANCE</text>
   </svg>`;
 
 await Promise.all([
